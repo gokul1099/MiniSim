@@ -18,6 +18,7 @@ class MiniSim: NSObject {
     private var isOnboardingFinishedObserver: NSKeyValueObservation?
 
     private lazy var onboarding = Onboarding()
+    private lazy var qrcode = QRCodeView()
 
     override init() {
         super.init()
@@ -152,6 +153,8 @@ class MiniSim: NSObject {
     @objc func menuItemAction(_ sender: NSMenuItem) {
         if let tag = MainMenuActions(rawValue: sender.tag) {
             switch tag {
+            case .adbwifi:
+                QRCodeView().openInWindow(sender: self)
             case .preferences:
                 settingsController.show()
             case .quit:

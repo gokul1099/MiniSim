@@ -12,5 +12,11 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Network usage is required for macOS/iOS communication</string>
+	<key>NSBonjourServices</key>
+	<array>
+		<string>_adb-tls-pairing._tcp.</string>
+	</array>
 </dict>
 </plist>

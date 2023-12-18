@@ -11,6 +11,7 @@ enum MainMenuActions: Int, CaseIterable {
     case clearDerrivedData = 200
     case preferences
     case quit
+    case adbwifi
 
     var keyEquivalent: String {
         switch self {
@@ -31,6 +32,8 @@ enum MainMenuActions: Int, CaseIterable {
             return NSLocalizedString("Preferences", comment: "")
         case .clearDerrivedData:
             return NSLocalizedString("Clear Xcode Derived Data", comment: "")
+        case .adbwifi:
+            return NSLocalizedString("Connect phone using wifi", comment: "")
         }
     }
 }
